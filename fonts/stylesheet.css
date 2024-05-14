@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'GangwonEduAll';
+    src: url('GangwonEduAllLight.eot');
+    src: url('GangwonEduAllLight.eot?#iefix') format('embedded-opentype'),
+        url('GangwonEduAllLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GangwonEduAll';
+    src: url('GangwonEduAllBold.eot');
+    src: url('GangwonEduAllBold.eot?#iefix') format('embedded-opentype'),
+        url('GangwonEduAllBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}

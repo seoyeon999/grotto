@@ -1,0 +1,1064 @@
+@charset "utf-8";
+
+/*강원교육모두, 300, bold
+font-family: 'GangwonEduAll';
+Suranna, 400
+font-family: "Suranna", serif;
+프리텐다드,100-900
+font-family: 'Pretendard';
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    cursor: url(../images/mouse1.png), auto
+}
+
+a {
+    cursor: url(../images/mouse2.png), auto
+}
+
+img,
+video,
+iframe {
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+body::-webkit-scrollbar {
+    width: 16px;
+    /* 스크롤바의 너비 */
+}
+
+body::-webkit-scrollbar-thumb {
+    height: 10%;
+    /* 스크롤바의 길이 */
+    background: #bad6eb;
+    /* 스크롤바의 색상 */
+
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #fff9ef
+        /*스크롤바 뒷 배경 색상*/
+}
+
+body {
+    min-width: 1450px;
+    font-size: 20px;
+    line-height: 34px;
+    font-family: 'Pretendard';
+    font-weight: 400;
+    color: #333c51;
+    background-color: #fff9ef;
+}
+
+/*header*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    min-width: 1320px;
+    padding: 18px 80px;
+    box-sizing: border-box;
+    transition: all 0.3s;
+}
+
+header:hover {
+    background-color: #fff9ef;
+}
+
+.header_scroll {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff9ef;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.08);
+}
+
+.header_icons {
+    display: flex;
+}
+
+.header_icons li {
+    padding-left: 24px;
+    padding-top: 6px;
+}
+
+.gnb {
+    display: flex;
+    padding: calc(25px - 18px);
+}
+
+.gnb>li {
+    padding: 0 70px;
+    color: #6f96d1;
+    position: relative;
+}
+
+.gnb>li:hover {
+    color: #bad6eb;
+    transition: all 0.3s;
+}
+
+.sub {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
+    color: #bad6eb;
+    padding-top: 10px;
+}
+
+.sub li {
+    font-size: 14px;
+    line-height: 10px;
+    font-weight: normal;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.sub_bg {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 170px;
+    background-color: #fff9ef;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.08);
+}
+
+.submenu_img {
+    position: absolute;
+    bottom: -165px;
+    right: -280px;
+    z-index: 2500;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.subimg1 {
+    right: calc(-280px - 617.99px);
+}
+
+.subimg2 {
+    right: calc(-280px - 427.69px);
+}
+
+.subimg3 {
+    right: calc(-280px - 242.5px);
+}
+
+.gnb>li:hover .submenu_img {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease-in;
+}
+
+
+
+/*main_banner*/
+.mb {
+    position: relative;
+}
+
+.mb .swiper-slide {
+    height: 100%;
+}
+
+
+.swiper-slide img:nth-child(1) {
+    width: 100%;
+}
+
+.mb1_title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -365px);
+    animation: fadein 1s linear 1;
+}
+
+/*mb1로 슬라이드 전환될 때마다 페이드인 애니메이션 넣기?????*/
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.slide_btn {
+    position: absolute;
+    bottom: 16%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+}
+
+.mb_next::after {
+    content: url(../images/main_banner_slide_next.png);
+}
+
+.mb_prev::after {
+    content: url(../images/main_banner_slide_prev.png);
+}
+
+.mb_next {
+    width: 41px;
+    height: 36px;
+    right: -55px;
+    transform: translateY(-2px);
+}
+
+.mb_prev {
+    width: 39px;
+    height: 16px;
+    left: -55px;
+    transform: translateY(50%);
+}
+
+/*about*/
+/*li들한테 width주기*/
+#about {
+    width: 1320px;
+    margin: 0 auto;
+    padding-top: 276px;
+    padding-bottom: 549px;
+}
+
+.about_flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about_flex li:nth-child(1) {
+    align-self: flex-end;
+}
+
+.about_flex li:nth-child(1) h2 {
+    font-family: "Suranna", serif;
+    color: #091f5b;
+    font-size: 100px;
+    line-height: 6px;
+    padding-bottom: 72px;
+    font-weight: 400;
+}
+
+.about_flex li:nth-child(1) p {
+    padding-bottom: 20px;
+}
+
+.about_flex li:nth-child(1) h6 {
+    font-family: "Suranna", serif;
+    font-size: 30px;
+    font-weight: 400;
+    color: #091f5b;
+    padding-bottom: 58px;
+}
+
+.about_flex li:nth-child(3) h3 {
+    font-family: "Suranna", serif;
+    font-weight: 400;
+    font-size: 50px;
+    color: #091f5b;
+    padding-top: 67px;
+    padding-bottom: 18px;
+}
+
+.more_btn {
+    display: inline-block;
+    position: relative;
+}
+
+.more_btn:hover .hover_btn2 {
+    opacity: 1;
+}
+
+.more_btn:hover .hover_btn1 {
+    opacity: 0;
+}
+
+.hover_btn2 {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*floor*/
+/*floor_left,right에게 또 줘야 하는가 width??*/
+#floor {
+    width: 1320px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.floor_slide {
+    width: 395px;
+    margin: 0 128px;
+}
+
+.floor_left h1 {
+    padding-top: 121px;
+    padding-bottom: 60px;
+    font-family: "Suranna", serif;
+    font-size: 60px;
+    font-weight: 400;
+    color: #091f5b;
+
+}
+
+.floor_left p {
+    padding-bottom: 19px;
+}
+
+.floor_right {
+    padding-top: 291px;
+}
+
+
+.floor_txt {
+    background-color: #fff9ef;
+    width: 280px;
+}
+
+.rotate_wrapper {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    /*위치는 고정*/
+    z-index: -1;
+    opacity: 0.5;
+}
+
+#reload {
+    width: 1105px;
+    /*이미지 가로 사이즈*/
+    height: 1131px;
+    /*높이*/
+}
+
+/*menu*/
+#menu {
+    width: 1320px;
+    margin: 0 auto;
+    padding-top: 522px;
+    padding-bottom: 287px;
+}
+
+.main_title {
+    font-family: "Suranna", serif;
+    font-size: 55px;
+    color: #091f5b;
+    font-weight: 400;
+    text-align: center;
+}
+
+#menu .main_title {
+    padding-bottom: 59px;
+}
+
+.menu_flex {
+    padding: 0 74px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu_slide {
+    width: 586px;
+}
+
+.menu_slide .swiper-slide img,
+.menu_right li img,
+.blur_box {
+    border-radius: 21px;
+}
+
+.menu_next::after {
+    content: url(../images/main_menu_slide_next.png);
+}
+
+.menu_prev::after {
+    content: url(../images/main_menu_slide_prev.png);
+}
+
+.menu_next,
+.menu_prev {
+    width: 48px;
+    height: 48px;
+}
+
+
+.menu_right {
+    width: 568px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 540px;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.menu_right li {
+    position: relative;
+}
+
+.menu_right li:hover .blur_box {
+    opacity: 1;
+    transition: all 0.3s;
+}
+
+.blur_box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 279px;
+    height: 265px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 91px;
+    padding-bottom: 65px;
+    box-sizing: border-box;
+    opacity: 0;
+    z-index: 20;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(51, 60, 81, 0.1);
+    /*색깔 다시 생각해보기*/
+}
+
+.menu_name {
+    font-family: "Suranna", serif;
+    font-size: 55px;
+    color: #fff9ef;
+    text-shadow: 1px 1px 3px #afada4;
+}
+
+/*슬라이드 호버시 블러 클래스*/
+.blur_on {
+    opacity: 1;
+    transition: all 0.3s;
+}
+
+
+/*md_banner*/
+#md_banner {
+    background: url(../images/main_md_banner_bg.jpg);
+}
+
+.md_slide_wrapper ul li {
+    width: 600px;
+}
+
+.md_slide_wrapper ul li:nth-child(1) {
+    padding-left: 50px;
+    box-sizing: border-box;
+}
+
+.md_slide_wrapper ul li:nth-child(2n-1) {
+    padding-top: 50px;
+    /*패딩값 계산하기*/
+}
+
+.md_slide_wrapper ul {
+    display: flex;
+    justify-content: space-around;
+    width: 6000px;
+}
+
+.md_slide_wrapper {
+    display: flex;
+    width: 12000px;
+    animation: slide 45s linear infinite;
+}
+
+.md_slide_wrapper:hover {
+    animation-play-state: paused;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.md_slide {
+    overflow: hidden;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/*community*/
+#community {
+    width: 1320px;
+    margin: 0 auto;
+    padding-top: 287px;
+}
+
+.community_box {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 80px;
+}
+
+.community_box li {
+    width: 430px;
+}
+
+.community_box li:nth-child(1) {
+    text-align: left;
+}
+
+.community_box li:nth-child(2) {
+    text-align: center;
+    padding-top: 95px;
+}
+
+.community_box li:nth-child(3) {
+    text-align: right;
+}
+
+.community_box li:nth-child(1) img,
+.community_box li:nth-child(3) img {
+    border-radius: 21px;
+}
+
+.community_box li:nth-child(2) img {
+    border-radius: 192px 192px 0 0;
+    margin-top: calc(60px - 17px);
+}
+
+.community_box li:nth-child(2) .community_img_box {
+    margin-left: calc((430px - 384px)/2);
+}
+
+.community_box li:nth-child(3) .community_img_box {
+    margin-left: calc((430px - 384px));
+}
+
+.community_box h3 {
+    font-family: 'GangwonEduAll';
+    font-weight: bold;
+    font-size: 40px;
+    color: #091f5b;
+    line-height: 60px;
+    margin-top: 60px;
+}
+
+.small_txt {
+    padding-top: 40px;
+    font-size: 15px;
+}
+
+
+.community_img_box {
+    position: relative;
+    width: 384px;
+}
+
+svg {
+    fill: none;
+    stroke-width: 10px;
+}
+
+#svg1 {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    z-index: -1;
+    width: 424px;
+    height: 424px;
+}
+
+#svg2 {
+    position: absolute;
+    top: 27px;
+    left: -19px;
+    z-index: -1;
+    width: 422px;
+    height: 416px;
+}
+
+path {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    stroke-miterlimit: 10;
+    opacity: 0.5;
+}
+
+.community_box li:nth-child(1) path {
+    stroke: url(#gradient_stroke);
+}
+
+.community_box li:nth-child(2) path {
+    stroke: #bad6eb;
+}
+
+.community_box li:nth-child(3) path {
+    stroke: #f1ca9a;
+}
+
+.path1 {
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.path2 {
+    fill-rule: evenodd;
+    clip-rule: evenodd;
+    stroke-linecap: round;
+}
+
+.community_img_box:hover path {
+    animation: path 1500ms forwards;
+}
+
+@keyframes path {
+    0% {
+        stroke-dashoffset: 50;
+        stroke-dasharray: 15;
+
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 0;
+
+    }
+
+
+    100% {
+        stroke-dashoffset: -50;
+        stroke-dasharray: 15;
+
+    }
+}
+
+
+
+/*instagram*/
+#instagram {
+    text-align: center;
+    padding-top: 310px;
+    padding-bottom: 295px;
+}
+
+.insta_slide {
+    width: 100%;
+    padding-bottom: 30px;
+    margin-top: 70px;
+    margin-bottom: 110px;
+}
+
+#instagram .swiper-wrapper {
+    transition-timing-function: linear;
+    column-gap: 30px;
+}
+
+#instagram .swiper-slide {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 18%;
+    /*수치 확인*/
+    transition: transform 0.3s;
+}
+
+#instagram .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#instagram .swiper-slide:hover {
+    transform: translateY(30px);
+}
+
+
+/*footer*/
+footer {
+    background: url(../images/footer_bg.png) no-repeat;
+    position: relative;
+}
+
+
+.footer_inner {
+    width: 1320px;
+    margin: 0 auto;
+    padding-top: 223px;
+    color: #fff9ef;
+    line-height: 30px;
+}
+
+.footer_flex_box {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: calc(136px - 15px);
+}
+
+footer ul {
+    display: flex;
+}
+
+footer ul li {
+    padding-left: 40px;
+}
+
+.footer_inner>p {
+    text-align: right;
+    padding-bottom: calc(60px - 15px);
+}
+
+
+.footer_logo {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.join_img {
+    position: absolute;
+    top: -18%;
+    right: 20%;
+}
+
+.footer_inner .join_txt {
+    color: #6f96d1;
+    text-align: left;
+    line-height: 30px;
+    position: absolute;
+    top: -21%;
+    right: 15%;
+}
+
+.join_enter {
+    font-family: 'GangwonEduAll';
+}
+
+@keyframes join_ani {
+    0% {
+        transform: translateX(20px);
+    }
+
+    50% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX(20px);
+    }
+}
+
+.join_txt:hover .join_enter {
+    animation: join_ani 1s linear infinite;
+}
+
+/*js addClass용*/
+.join_ani_add {
+    animation: join_ani 1s linear infinite;
+}
+
+
+
+/*longin, signup*/
+#popup_log {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9000;
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.popup_log_inner {
+    background-color: rgba(255, 249, 239, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.form-structor {
+    border-radius: 15px;
+    height: 550px;
+    width: 350px;
+    position: relative;
+    overflow: hidden;
+    background-color: #fff9ef;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-structor::after {
+    content: '';
+    opacity: .8;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url(../images/login_bg.jpg) no-repeat left bottom;
+    opacity: 0.5;
+}
+
+.form-structor .signup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 65%;
+    z-index: 5;
+    transition: all .3s ease;
+}
+
+
+.form-structor .signup.slide-up {
+    top: 5%;
+    transform: translate(-50%, 0%);
+    transition: all .3s ease;
+}
+
+.form-structor .signup.slide-up .form-holder,
+.form-structor .signup.slide-up .submit-btn {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.form-structor .signup.slide-up .form-title {
+    font-size: 1em;
+    cursor: url(../images/mouse2.png), auto;
+}
+
+.form-structor .signup .form-title {
+    color: #fff;
+    font-size: 1.7em;
+    text-align: center;
+}
+
+.form-structor .signup .form-holder {
+    border-radius: 15px;
+    background-color: #fff9ef;
+    overflow: hidden;
+    margin-top: 50px;
+    opacity: 1;
+    visibility: visible;
+    transition: all .3s ease;
+}
+
+.form-structor .signup .form-holder .input {
+    border: 0;
+    outline: none;
+    box-shadow: none;
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    padding: 8px 15px;
+    border-bottom: 1px solid #eee;
+    width: 100%;
+    font-size: 12px;
+}
+
+.form-structor .signup .form-holder .input:last-child {
+    border-bottom: 0;
+}
+
+.form-structor .signup .form-holder .input::-webkit-input-placeholder {
+    color: rgba(51, 60, 81, 0.4);
+}
+
+.form-structor .signup .submit-btn {
+    background-color: #bad6eb;
+    color: rgba(256, 256, 256, 0.7);
+    border: 0;
+    border-radius: 15px;
+    display: block;
+    margin: 15px auto;
+    padding: 15px 45px;
+    width: 100%;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: url(../images/mouse2.png), auto;
+    opacity: 1;
+    visibility: visible;
+    transition: all .3s ease;
+}
+
+.form-structor .signup .submit-btn:hover {
+    transition: all .3s ease;
+    background-color: #6f96d1;
+}
+
+.form-structor .login {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 5;
+    transition: all .3s ease;
+}
+
+.form-structor .login::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -20px;
+    transform: translate(-50%, 0);
+    background-color: #fff;
+    width: 200%;
+    height: 250px;
+    border-radius: 50%;
+    z-index: 4;
+    transition: all .3s ease;
+}
+
+.form-structor .login .center {
+    position: absolute;
+    top: calc(50% - 10%);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 65%;
+    z-index: 5;
+    transition: all .3s ease;
+}
+
+.form-structor .login .center .form-title {
+    color: #333c51;
+    font-size: 1.7em;
+    text-align: center;
+}
+
+.form-structor .login .center .form-holder {
+    border-radius: 15px;
+    background-color: #fff9ff;
+    border: 1px solid #eee;
+    overflow: hidden;
+    margin-top: 50px;
+    opacity: 1;
+    visibility: visible;
+    transition: all .3s ease;
+}
+
+.form-structor .login .center .form-holder .input {
+    border: 0;
+    outline: none;
+    box-shadow: none;
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    padding: 8px 15px;
+    border-bottom: 1px solid #eee;
+    width: 100%;
+    font-size: 12px;
+}
+
+.form-structor .login .center .form-holder .input:last-child {
+    border-bottom: 0;
+}
+
+.form-structor .login .center .form-holder .input::-webkit-input-placeholder {
+    color: rgba(51, 60, 81, 0.4);
+}
+
+.form-structor .login .center .submit-btn {
+    background-color: #bad6eb;
+    color: rgba(256, 256, 256, 0.7);
+    border: 0;
+    border-radius: 15px;
+    display: block;
+    margin: 15px auto;
+    padding: 15px 45px;
+    width: 100%;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: url(../images/mouse2.png), auto;
+    opacity: 1;
+    visibility: visible;
+    transition: all .3s ease;
+}
+
+.form-structor .login .center .submit-btn:hover {
+    transition: all .3s ease;
+    background-color: #6f96d1;
+}
+
+.form-structor .login.slide-up {
+    top: 90%;
+    transition: all .3s ease;
+}
+
+.form-structor .login.slide-up .center {
+    top: 10%;
+    transform: translate(-50%, 0%);
+    transition: all .3s ease;
+}
+
+.form-structor .login.slide-up .form-holder,
+.form-structor .login.slide-up .submit-btn {
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease;
+}
+
+.form-structor .login.slide-up .form-title {
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    cursor: url(../images/mouse2.png), auto;
+    transition: all .3s ease;
+}
+
+.popup_close {
+    position: absolute;
+    top: 7px;
+    right: 15px;
+    z-index: 9999;
+    cursor: url(../images/mouse2.png), auto;
+    color: #fff9ff;
+}
+
+.popup_log_btn {
+    cursor: url(../images/mouse2.png), auto;
+}
