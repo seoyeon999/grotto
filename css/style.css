@@ -236,6 +236,7 @@ header:hover {
     height: 36px;
     right: -55px;
     transform: translateY(-2px);
+    cursor: url(../images/mouse2.png), auto
 }
 
 .mb_prev {
@@ -243,6 +244,7 @@ header:hover {
     height: 16px;
     left: -55px;
     transform: translateY(50%);
+    cursor: url(../images/mouse2.png), auto
 }
 
 /*about*/
@@ -418,6 +420,7 @@ header:hover {
 .menu_prev {
     width: 48px;
     height: 48px;
+    cursor: url(../images/mouse2.png), auto
 }
 
 

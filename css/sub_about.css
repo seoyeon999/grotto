@@ -253,7 +253,7 @@ header:hover {
   width: 7px;
   height: 11px;
   transform: translateY(181px);
-
+  cursor: url(../images/mouse2.png), auto
 }
 
 .about_next {
