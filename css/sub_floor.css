@@ -68,6 +68,11 @@ body {
     background-color: #fff9ef;
 }
 
+/*wrap*/
+.wrap {
+    overflow: hidden;
+}
+
 /*header*/
 body header {
     line-height: 30px;
@@ -187,11 +192,6 @@ header:hover {
 #banner {
     background: url(../images/sub_floor_banner.jpg) no-repeat center center;
     height: 420px;
-}
-
-/*overflow_hidden*/
-.overflow_hidden {
-    overflow: hidden;
 }
 
 /*intro*/

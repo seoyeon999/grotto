@@ -68,6 +68,11 @@ body {
   background-color: #fff9ef;
 }
 
+/*wrap*/
+.wrap {
+  overflow: hidden;
+}
+
 /*header*/
 header {
   display: flex;
