@@ -89,7 +89,7 @@ $(function () {
         $("#change_box").css("background-color", "#F2CB9B");
     });
     $(".visual .cc7").mouseover(function () {
-        $("#change_box").css("background-color", "#C3D59F");
+        $("#change_box").css("background-color", "#4D5F87");
     });
 
 
